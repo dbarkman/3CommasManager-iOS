@@ -9,44 +9,71 @@ import SwiftUI
 
 struct ActiveDealsView: View {
     
-    var activeDealProvider: ActiveDealProvider = .shared
+    var activeDealsProvider: ActiveDealsProvider = .shared
     
     @State private var activeDeals = [ActiveDeal]()
-    
+    @State private var account = "real"
+
     var body: some View {
         NavigationView {
             List(activeDeals, id: \.id) { activeDeal in
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("ATOM")
-                        Text("Fri, 12/31, 17:39")
+                        Text(activeDeal.to_currency)
                     }
                     HStack {
-                        Text("Gen2 Multi - DCA - Large - 2")
+                        Text(activeDeal.createdAtDateTime)
+                        Spacer()
+                        Text("Age: \(activeDeal.age)")
                     }
                     HStack {
-                        Text("$0 : $24.65 : $24.93 : $25.05")
+                        Text("$\(activeDeal.actual_profit)")
+                        Spacer()
+                        Text("\(activeDeal.actual_profit_percentage)%")
+                        Spacer()
+                        Text("\(activeDeal.completed_safety_orders_count) of \(activeDeal.max_safety_orders)")
                     }
                     HStack {
-                        Text("$3.33")
-                        Text("1.26%")
-                        Text("12 of 15")
-                        Text("44 mins")
+                        Text("$\(activeDeal.bought_average_price) : $\(activeDeal.current_price) : $\(activeDeal.take_profit_price)")
+                    }
+                    HStack {
+                        Text(activeDeal.bot_name)
                     }
                 }
-                .padding()
             }
-            .task { //task requires iOS 15
-                await loadActiveDeals()
+            .task {
+                await loadActiveDeals(account: account)
+            }
+            .refreshable {
+                await loadActiveDeals(account: account)
             }
             .navigationTitle("Active Deals")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(account.capitalized) {
+                        Task {
+                            await loadOtherAccount()
+                        }
+                    }
+                }
+            }
         }
     }
-    
-    private func loadActiveDeals() async {
+
+    private func loadOtherAccount() async {
+        if account == "real" {
+            account = "paper"
+            await loadActiveDeals(account: "paper")
+        } else if account == "paper" {
+            account = "real"
+            await loadActiveDeals(account: "real")
+        }
+    }
+
+    private func loadActiveDeals(account: String) async {
         do {
             activeDeals.removeAll()
-            activeDeals = try await activeDealProvider.fetchActiveDeal(account: "real")
+            activeDeals = try await activeDealsProvider.fetchActiveDeals(account: account)
         } catch {
             print("Error loading active deals \(error)")
         }

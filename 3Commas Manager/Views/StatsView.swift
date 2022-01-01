@@ -12,6 +12,7 @@ struct StatsView: View {
     var statsProvider: StatsProvider = .shared
     
     @State private var stats = Stats()
+    @State private var account = "real"
     @State private var currentActiveDealsCount = ""
     @State private var dealsClosedTodayCount = ""
     @State private var totalClosedDealCount = ""
@@ -146,7 +147,7 @@ struct StatsView: View {
                     HStack {
                         Text("Bags Total Cost")
                         Spacer()
-                        Text(bagsAmount)
+                        Text("$\(bagsAmount)")
                     }
                     HStack {
                         Text("Oldest Bag")
@@ -166,7 +167,7 @@ struct StatsView: View {
                     HStack {
                         Text("Largest Deal")
                         Spacer()
-                        Text("$\(largestDeal)")
+                        Text(largestDeal)
                     }
                     HStack {
                         Text("Bitcoin")
@@ -186,12 +187,34 @@ struct StatsView: View {
                 }
             }
             .task {
-                await loadStats(account: "real")
+                await loadStats(account: account)
+            }
+            .refreshable {
+                await loadStats(account: account)
             }
             .navigationTitle("Stats")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(account.capitalized) {
+                        Task {
+                            await loadOtherAccount()
+                        }
+                    }
+                }
+            }
         }
     }
     
+    private func loadOtherAccount() async {
+        if account == "real" {
+            account = "paper"
+            await loadStats(account: "paper")
+        } else if account == "paper" {
+            account = "real"
+            await loadStats(account: "real")
+        }
+    }
+
     private func loadStats(account: String) async {
         do {
             stats = try await statsProvider.fetchStats(account: account)

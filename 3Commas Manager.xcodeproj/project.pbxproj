@@ -20,7 +20,13 @@
 		63967E50277F93BB00ED5575 /* StatsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E4F277F93BB00ED5575 /* StatsProvider.swift */; };
 		63967E52277F93C200ED5575 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E51277F93C200ED5575 /* Stats.swift */; };
 		63967E54277FCCDE00ED5575 /* ActiveDealsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */; };
-		63967E56277FCCE800ED5575 /* ActiveDeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E55277FCCE800ED5575 /* ActiveDeals.swift */; };
+		63967E56277FCCE800ED5575 /* ActiveDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E55277FCCE800ED5575 /* ActiveDeal.swift */; };
+		63967E5827802C5B00ED5575 /* FinishedDealsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5727802C5B00ED5575 /* FinishedDealsProvider.swift */; };
+		63967E5A27802C6700ED5575 /* FinishedDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5927802C6700ED5575 /* FinishedDeal.swift */; };
+		63967E5C27808C7500ED5575 /* AssetsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5B27808C7500ED5575 /* AssetsProvider.swift */; };
+		63967E5E27808C7D00ED5575 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5D27808C7D00ED5575 /* Asset.swift */; };
+		63967E602780A98E00ED5575 /* BotsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5F2780A98E00ED5575 /* BotsProvider.swift */; };
+		63967E622780A99500ED5575 /* Bots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E612780A99500ED5575 /* Bots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +44,13 @@
 		63967E4F277F93BB00ED5575 /* StatsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsProvider.swift; sourceTree = "<group>"; };
 		63967E51277F93C200ED5575 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDealsProvider.swift; sourceTree = "<group>"; };
-		63967E55277FCCE800ED5575 /* ActiveDeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDeals.swift; sourceTree = "<group>"; };
+		63967E55277FCCE800ED5575 /* ActiveDeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDeal.swift; sourceTree = "<group>"; };
+		63967E5727802C5B00ED5575 /* FinishedDealsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedDealsProvider.swift; sourceTree = "<group>"; };
+		63967E5927802C6700ED5575 /* FinishedDeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedDeal.swift; sourceTree = "<group>"; };
+		63967E5B27808C7500ED5575 /* AssetsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsProvider.swift; sourceTree = "<group>"; };
+		63967E5D27808C7D00ED5575 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		63967E5F2780A98E00ED5575 /* BotsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsProvider.swift; sourceTree = "<group>"; };
+		63967E612780A99500ED5575 /* Bots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +120,13 @@
 				63967E4F277F93BB00ED5575 /* StatsProvider.swift */,
 				63967E51277F93C200ED5575 /* Stats.swift */,
 				63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */,
-				63967E55277FCCE800ED5575 /* ActiveDeals.swift */,
+				63967E55277FCCE800ED5575 /* ActiveDeal.swift */,
+				63967E5727802C5B00ED5575 /* FinishedDealsProvider.swift */,
+				63967E5927802C6700ED5575 /* FinishedDeal.swift */,
+				63967E5B27808C7500ED5575 /* AssetsProvider.swift */,
+				63967E5D27808C7D00ED5575 /* Asset.swift */,
+				63967E5F2780A98E00ED5575 /* BotsProvider.swift */,
+				63967E612780A99500ED5575 /* Bots.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,15 +202,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				63967E48277F902B00ED5575 /* FinishedDealsView.swift in Sources */,
-				63967E56277FCCE800ED5575 /* ActiveDeals.swift in Sources */,
+				63967E56277FCCE800ED5575 /* ActiveDeal.swift in Sources */,
 				63967E52277F93C200ED5575 /* Stats.swift in Sources */,
+				63967E602780A98E00ED5575 /* BotsProvider.swift in Sources */,
 				63967E54277FCCDE00ED5575 /* ActiveDealsProvider.swift in Sources */,
+				63967E622780A99500ED5575 /* Bots.swift in Sources */,
 				63967E44277F8FFD00ED5575 /* StatsView.swift in Sources */,
 				63967E4A277F903500ED5575 /* AssetsView.swift in Sources */,
 				63967E42277F8C4A00ED5575 /* TabsView.swift in Sources */,
 				63967E4C277F904300ED5575 /* BotsView.swift in Sources */,
+				63967E5827802C5B00ED5575 /* FinishedDealsProvider.swift in Sources */,
 				63967E46277F901700ED5575 /* ActiveDealsView.swift in Sources */,
+				63967E5E27808C7D00ED5575 /* Asset.swift in Sources */,
+				63967E5C27808C7500ED5575 /* AssetsProvider.swift in Sources */,
 				63967E36277F8A2C00ED5575 /* ContentView.swift in Sources */,
+				63967E5A27802C6700ED5575 /* FinishedDeal.swift in Sources */,
 				63967E34277F8A2C00ED5575 /* _Commas_ManagerApp.swift in Sources */,
 				63967E50277F93BB00ED5575 /* StatsProvider.swift in Sources */,
 			);
@@ -252,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -307,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -322,8 +346,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20220101.1;
 				DEVELOPMENT_ASSET_PATHS = "\"3Commas Manager/Preview Content\"";
 				DEVELOPMENT_TEAM = V66UJ72Z63;
 				ENABLE_PREVIEWS = YES;
@@ -333,13 +358,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.-Commas-Manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.3Commas-Manager";
 				PRODUCT_NAME = Manager;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,8 +378,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20220101.1;
 				DEVELOPMENT_ASSET_PATHS = "\"3Commas Manager/Preview Content\"";
 				DEVELOPMENT_TEAM = V66UJ72Z63;
 				ENABLE_PREVIEWS = YES;
@@ -362,13 +390,15 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.-Commas-Manager";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.3Commas-Manager";
 				PRODUCT_NAME = Manager;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
