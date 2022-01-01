@@ -11,14 +11,34 @@
 		63967E36277F8A2C00ED5575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E35277F8A2C00ED5575 /* ContentView.swift */; };
 		63967E38277F8A2E00ED5575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63967E37277F8A2E00ED5575 /* Assets.xcassets */; };
 		63967E3B277F8A2E00ED5575 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63967E3A277F8A2E00ED5575 /* Preview Assets.xcassets */; };
+		63967E42277F8C4A00ED5575 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E41277F8C4A00ED5575 /* TabsView.swift */; };
+		63967E44277F8FFD00ED5575 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E43277F8FFD00ED5575 /* StatsView.swift */; };
+		63967E46277F901700ED5575 /* ActiveDealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E45277F901700ED5575 /* ActiveDealsView.swift */; };
+		63967E48277F902B00ED5575 /* FinishedDealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E47277F902B00ED5575 /* FinishedDealsView.swift */; };
+		63967E4A277F903500ED5575 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E49277F903500ED5575 /* AssetsView.swift */; };
+		63967E4C277F904300ED5575 /* BotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E4B277F904300ED5575 /* BotsView.swift */; };
+		63967E50277F93BB00ED5575 /* StatsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E4F277F93BB00ED5575 /* StatsProvider.swift */; };
+		63967E52277F93C200ED5575 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E51277F93C200ED5575 /* Stats.swift */; };
+		63967E54277FCCDE00ED5575 /* ActiveDealsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */; };
+		63967E56277FCCE800ED5575 /* ActiveDeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E55277FCCE800ED5575 /* ActiveDeals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63967E30277F8A2C00ED5575 /* 3Commas Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3Commas Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63967E30277F8A2C00ED5575 /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63967E33277F8A2C00ED5575 /* _Commas_ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Commas_ManagerApp.swift; sourceTree = "<group>"; };
 		63967E35277F8A2C00ED5575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63967E37277F8A2E00ED5575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63967E3A277F8A2E00ED5575 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63967E41277F8C4A00ED5575 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		63967E43277F8FFD00ED5575 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		63967E45277F901700ED5575 /* ActiveDealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDealsView.swift; sourceTree = "<group>"; };
+		63967E47277F902B00ED5575 /* FinishedDealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedDealsView.swift; sourceTree = "<group>"; };
+		63967E49277F903500ED5575 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		63967E4B277F904300ED5575 /* BotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsView.swift; sourceTree = "<group>"; };
+		63967E4F277F93BB00ED5575 /* StatsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsProvider.swift; sourceTree = "<group>"; };
+		63967E51277F93C200ED5575 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDealsProvider.swift; sourceTree = "<group>"; };
+		63967E55277FCCE800ED5575 /* ActiveDeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveDeals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +63,7 @@
 		63967E31277F8A2C00ED5575 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63967E30277F8A2C00ED5575 /* 3Commas Manager.app */,
+				63967E30277F8A2C00ED5575 /* Manager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,8 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				63967E33277F8A2C00ED5575 /* _Commas_ManagerApp.swift */,
-				63967E35277F8A2C00ED5575 /* ContentView.swift */,
 				63967E37277F8A2E00ED5575 /* Assets.xcassets */,
+				63967E4D277F904D00ED5575 /* Views */,
+				63967E4E277F939000ED5575 /* Models */,
 				63967E39277F8A2E00ED5575 /* Preview Content */,
 			);
 			path = "3Commas Manager";
@@ -65,6 +86,31 @@
 				63967E3A277F8A2E00ED5575 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		63967E4D277F904D00ED5575 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63967E35277F8A2C00ED5575 /* ContentView.swift */,
+				63967E41277F8C4A00ED5575 /* TabsView.swift */,
+				63967E45277F901700ED5575 /* ActiveDealsView.swift */,
+				63967E43277F8FFD00ED5575 /* StatsView.swift */,
+				63967E47277F902B00ED5575 /* FinishedDealsView.swift */,
+				63967E49277F903500ED5575 /* AssetsView.swift */,
+				63967E4B277F904300ED5575 /* BotsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		63967E4E277F939000ED5575 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63967E4F277F93BB00ED5575 /* StatsProvider.swift */,
+				63967E51277F93C200ED5575 /* Stats.swift */,
+				63967E53277FCCDE00ED5575 /* ActiveDealsProvider.swift */,
+				63967E55277FCCE800ED5575 /* ActiveDeals.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +130,7 @@
 			);
 			name = "3Commas Manager";
 			productName = "3Commas Manager";
-			productReference = 63967E30277F8A2C00ED5575 /* 3Commas Manager.app */;
+			productReference = 63967E30277F8A2C00ED5575 /* Manager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,8 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63967E48277F902B00ED5575 /* FinishedDealsView.swift in Sources */,
+				63967E56277FCCE800ED5575 /* ActiveDeals.swift in Sources */,
+				63967E52277F93C200ED5575 /* Stats.swift in Sources */,
+				63967E54277FCCDE00ED5575 /* ActiveDealsProvider.swift in Sources */,
+				63967E44277F8FFD00ED5575 /* StatsView.swift in Sources */,
+				63967E4A277F903500ED5575 /* AssetsView.swift in Sources */,
+				63967E42277F8C4A00ED5575 /* TabsView.swift in Sources */,
+				63967E4C277F904300ED5575 /* BotsView.swift in Sources */,
+				63967E46277F901700ED5575 /* ActiveDealsView.swift in Sources */,
 				63967E36277F8A2C00ED5575 /* ContentView.swift in Sources */,
 				63967E34277F8A2C00ED5575 /* _Commas_ManagerApp.swift in Sources */,
+				63967E50277F93BB00ED5575 /* StatsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +339,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.-Commas-Manager";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Manager;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +368,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbarkman.-Commas-Manager";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Manager;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
