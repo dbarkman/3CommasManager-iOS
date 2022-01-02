@@ -12,8 +12,17 @@ struct FinishedDealsProvider {
     static let shared = FinishedDealsProvider()
     
     func fetchFinishedDeals(account: String) async throws -> [FinishedDeal] {
-        let finishedDealsURL = URL(string: "https://dbarkman.com/api/deals?account=\(account)&finished=true&order=desc")!
-        let (data, _) = try await URLSession.shared.data(for: URLRequest(url: finishedDealsURL))
+        let apiKey = APISettings.fetchAPISettings().apiKey
+        let secretKey = APISettings.fetchAPISettings().secretKey
+        let urlBase = APISettings.fetchAPISettings().urlBase
+        let dealsEndpoint = APISettings.fetchAPISettings().dealsEndpoint
+        let signature = CryptoUtilities.signRequest(input: apiKey, secretKey: secretKey)
+        
+        let finishedDealsURL = URL(string: urlBase + dealsEndpoint + "?account=\(account)&finished=true&order=desc")!
+        var urlRequest = URLRequest(url: finishedDealsURL)
+        urlRequest.setValue(apiKey, forHTTPHeaderField: "apiKey")
+        urlRequest.setValue(signature, forHTTPHeaderField: "signature")
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
         var finishedDealsList = [FinishedDeal]()
         
         //@todo check for API errors

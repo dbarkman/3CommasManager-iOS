@@ -12,8 +12,17 @@ struct AssetsProvider {
     static let shared = AssetsProvider()
     
     func fetchAssets(account: String) async throws -> [Asset] {
-        let assetsURL = URL(string: "https://dbarkman.com/api/assets?account=\(account)")!
-        let (data, _) = try await URLSession.shared.data(for: URLRequest(url: assetsURL))
+        let apiKey = APISettings.fetchAPISettings().apiKey
+        let secretKey = APISettings.fetchAPISettings().secretKey
+        let urlBase = APISettings.fetchAPISettings().urlBase
+        let assetsEndpoint = APISettings.fetchAPISettings().assetsEndpoint
+        let signature = CryptoUtilities.signRequest(input: apiKey, secretKey: secretKey)
+        
+        let assetsURL = URL(string: urlBase + assetsEndpoint + "?account=\(account)")!
+        var urlRequest = URLRequest(url: assetsURL)
+        urlRequest.setValue(apiKey, forHTTPHeaderField: "apiKey")
+        urlRequest.setValue(signature, forHTTPHeaderField: "signature")
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
         var assetsList = [Asset]()
         
         //@todo check for API errors

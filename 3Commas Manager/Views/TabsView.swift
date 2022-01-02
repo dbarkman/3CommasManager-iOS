@@ -16,7 +16,7 @@ struct TabsView: View {
                 }
             ActiveDealsView()
                 .tabItem {
-                    Label("Active", systemImage: "bitcoinsign.circle")
+                    Label("Active", systemImage: "play.circle")
                 }
             FinishedDealsView()
                 .tabItem {
@@ -24,7 +24,7 @@ struct TabsView: View {
                 }
             AssetsView()
                 .tabItem {
-                    Label("Assets", systemImage: "dollarsign.circle")
+                    Label("Assets", systemImage: "bitcoinsign.circle")
                 }
             BotsView()
                 .tabItem {

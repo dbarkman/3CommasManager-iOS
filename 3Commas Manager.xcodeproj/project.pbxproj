@@ -27,6 +27,10 @@
 		63967E5E27808C7D00ED5575 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5D27808C7D00ED5575 /* Asset.swift */; };
 		63967E602780A98E00ED5575 /* BotsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E5F2780A98E00ED5575 /* BotsProvider.swift */; };
 		63967E622780A99500ED5575 /* Bots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E612780A99500ED5575 /* Bots.swift */; };
+		63967E652780F0BC00ED5575 /* CryptoUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E642780F0BC00ED5575 /* CryptoUtilities.swift */; };
+		63967E682781300600ED5575 /* api.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63967E672781300600ED5575 /* api.plist */; };
+		63967E6A2781302100ED5575 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E692781302100ED5575 /* API.swift */; };
+		63967E6C278132DF00ED5575 /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63967E6B278132DF00ED5575 /* APISettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		63967E5D27808C7D00ED5575 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		63967E5F2780A98E00ED5575 /* BotsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotsProvider.swift; sourceTree = "<group>"; };
 		63967E612780A99500ED5575 /* Bots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bots.swift; sourceTree = "<group>"; };
+		63967E642780F0BC00ED5575 /* CryptoUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtilities.swift; sourceTree = "<group>"; };
+		63967E672781300600ED5575 /* api.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = api.plist; sourceTree = "<group>"; };
+		63967E692781302100ED5575 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		63967E6B278132DF00ED5575 /* APISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +93,10 @@
 			children = (
 				63967E33277F8A2C00ED5575 /* _Commas_ManagerApp.swift */,
 				63967E37277F8A2E00ED5575 /* Assets.xcassets */,
+				63967E6627812FB300ED5575 /* API */,
 				63967E4D277F904D00ED5575 /* Views */,
 				63967E4E277F939000ED5575 /* Models */,
+				63967E632780F09700ED5575 /* Helpers */,
 				63967E39277F8A2E00ED5575 /* Preview Content */,
 			);
 			path = "3Commas Manager";
@@ -129,6 +139,24 @@
 				63967E612780A99500ED5575 /* Bots.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		63967E632780F09700ED5575 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				63967E642780F0BC00ED5575 /* CryptoUtilities.swift */,
+				63967E6B278132DF00ED5575 /* APISettings.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		63967E6627812FB300ED5575 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				63967E672781300600ED5575 /* api.plist */,
+				63967E692781302100ED5575 /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63967E3B277F8A2E00ED5575 /* Preview Assets.xcassets in Resources */,
+				63967E682781300600ED5575 /* api.plist in Resources */,
 				63967E38277F8A2E00ED5575 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +244,9 @@
 				63967E46277F901700ED5575 /* ActiveDealsView.swift in Sources */,
 				63967E5E27808C7D00ED5575 /* Asset.swift in Sources */,
 				63967E5C27808C7500ED5575 /* AssetsProvider.swift in Sources */,
+				63967E6C278132DF00ED5575 /* APISettings.swift in Sources */,
+				63967E6A2781302100ED5575 /* API.swift in Sources */,
+				63967E652780F0BC00ED5575 /* CryptoUtilities.swift in Sources */,
 				63967E36277F8A2C00ED5575 /* ContentView.swift in Sources */,
 				63967E5A27802C6700ED5575 /* FinishedDeal.swift in Sources */,
 				63967E34277F8A2C00ED5575 /* _Commas_ManagerApp.swift in Sources */,
