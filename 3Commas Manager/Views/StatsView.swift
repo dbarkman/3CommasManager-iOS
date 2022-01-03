@@ -123,23 +123,6 @@ struct StatsView: View {
                         Text("\(dealsClosedMaxSafetyOrdersPercent)%")
                     }
                     HStack {
-                        Text("Portfolio Balance")
-                        Spacer()
-                        Text("$\(portfolioBalance, specifier: "%.2f")")
-                    }
-                    HStack {
-                        Text("Portfolio Change")
-                        Spacer()
-                        Text("\(portfolioChangePercent)%")
-                    }
-                    HStack {
-                        Text("Fear & Greed Index")
-                        Spacer()
-                        Text(fearGreedIndex)
-                    }
-                }
-                Group {
-                    HStack {
                         Text("Bags, older than 72 hours")
                         Spacer()
                         Text(bagsCount)
@@ -154,6 +137,8 @@ struct StatsView: View {
                         Spacer()
                         Text("\(oldestBag) hours")
                     }
+                }
+                Group {
                     HStack {
                         Text("Active Bots")
                         Spacer()
@@ -168,6 +153,21 @@ struct StatsView: View {
                         Text("Largest Deal")
                         Spacer()
                         Text(largestDeal)
+                    }
+                    HStack {
+                        Text("Portfolio Balance")
+                        Spacer()
+                        Text("$\(portfolioBalance, specifier: "%.2f")")
+                    }
+                    HStack {
+                        Text("Portfolio Change")
+                        Spacer()
+                        Text("\(portfolioChangePercent)%")
+                    }
+                    HStack {
+                        Text("Fear & Greed Index")
+                        Spacer()
+                        Text(fearGreedIndex)
                     }
                     HStack {
                         Text("Bitcoin")
