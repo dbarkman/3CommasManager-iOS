@@ -23,7 +23,7 @@ struct StatsData: Decodable {
 }
 
 struct Stats: Decodable, Hashable {
-    var currentActiveDealsCount: String?
+    var currentActiveDealsCount = ""
     var dealsClosedTodayCount: String?
     var totalClosedDealCount: String?
     var dealsClosedNoSafetyOrdersPercent: String?
@@ -36,14 +36,14 @@ struct Stats: Decodable, Hashable {
     var todayAverageCloseAge: String?
     var totalAverageCloseAge: String?
     var fearGreedIndex: String?
-    var portfolioBalance: Double?
+    var portfolioBalance: String?
     var portfolioChangePercent: String?
     var daysTradingCount: String?
     var averageDailyClosedCount: String?
     var averageDailyClosedProfit: String?
     var bagsCount: String?
     var bagsAmount: String?
-    var oldestBag: String?
+    var biggestBag: String?
     var activeBots: String?
     var mostTradedAsset: String?
     var largestDeal: String?
