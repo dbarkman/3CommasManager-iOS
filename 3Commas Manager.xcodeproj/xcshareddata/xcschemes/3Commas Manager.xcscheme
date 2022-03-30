@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "63967E2F277F8A2C00ED5575"
-               BuildableName = "3Commas Manager.app"
+               BuildableName = "Manager.app"
                BlueprintName = "3Commas Manager"
                ReferencedContainer = "container:3Commas Manager.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63967E2F277F8A2C00ED5575"
-            BuildableName = "3Commas Manager.app"
+            BuildableName = "Manager.app"
             BlueprintName = "3Commas Manager"
             ReferencedContainer = "container:3Commas Manager.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "63967E2F277F8A2C00ED5575"
-            BuildableName = "3Commas Manager.app"
+            BuildableName = "Manager.app"
             BlueprintName = "3Commas Manager"
             ReferencedContainer = "container:3Commas Manager.xcodeproj">
          </BuildableReference>

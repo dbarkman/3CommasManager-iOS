@@ -12,7 +12,7 @@ struct BotsView: View {
     var botsProvider: BotsProvider = .shared
     
     @State private var bots = [Bot]()
-    @State private var botType = "Multi"
+    @State private var account = "real"
     
     var body: some View {
         NavigationView {
@@ -31,17 +31,17 @@ struct BotsView: View {
                 }
             }
             .task {
-                await loadBots(botType: botType)
+                await loadBots(account: account)
             }
             .refreshable {
-                await loadBots(botType: botType)
+                await loadBots(account: account)
             }
             .navigationTitle("Bots, beep boop")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(botType.capitalized) {
+                    Button(account.capitalized) {
                         Task {
-                            await loadOtherType()
+                            await loadOtherAccount()
                         }
                     }
                 }
@@ -49,20 +49,20 @@ struct BotsView: View {
         }
     }
     
-    private func loadOtherType() async {
-        if botType == "Multi" {
-            botType = "Single"
-            await loadBots(botType: "Single")
-        } else if botType == "Single" {
-            botType = "Multi"
-            await loadBots(botType: "Multi")
+    private func loadOtherAccount() async {
+        if account == "real" {
+            account = "paper"
+            await loadBots(account: "paper")
+        } else if account == "paper" {
+            account = "real"
+            await loadBots(account: "real")
         }
     }
 
-    private func loadBots(botType: String) async {
+    private func loadBots(account: String) async {
         do {
             bots.removeAll()
-            bots = try await botsProvider.fetchBots(botType: botType)
+            bots = try await botsProvider.fetchBots(account: account)
         } catch {
             print("Error loading bots \(error)")
         }

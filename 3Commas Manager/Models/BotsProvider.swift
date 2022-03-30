@@ -11,14 +11,14 @@ struct BotsProvider {
     
     static let shared = BotsProvider()
 
-    func fetchBots(botType: String) async throws -> [Bot] {
+    func fetchBots(account: String) async throws -> [Bot] {
         let apiKey = APISettings.fetchAPISettings().apiKey
         let secretKey = APISettings.fetchAPISettings().secretKey
         let urlBase = APISettings.fetchAPISettings().urlBase
         let botsEndpoint = APISettings.fetchAPISettings().botsEndpoint
         let signature = CryptoUtilities.signRequest(input: apiKey, secretKey: secretKey)
         
-        let botsURL = URL(string: urlBase + botsEndpoint + "?botType=\(botType)")!
+        let botsURL = URL(string: urlBase + botsEndpoint + "?account=\(account)")!
         var urlRequest = URLRequest(url: botsURL)
         urlRequest.setValue(apiKey, forHTTPHeaderField: "apiKey")
         urlRequest.setValue(signature, forHTTPHeaderField: "signature")

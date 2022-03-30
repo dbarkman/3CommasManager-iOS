@@ -22,7 +22,7 @@ struct StatsProvider {
         var urlRequest = URLRequest(url: statsURL)
         urlRequest.setValue(apiKey, forHTTPHeaderField: "apiKey")
         urlRequest.setValue(signature, forHTTPHeaderField: "signature")
-        let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        let (data, status) = try await URLSession.shared.data(for: urlRequest)
         var stats = Stats()
         
         //@todo check for API errors

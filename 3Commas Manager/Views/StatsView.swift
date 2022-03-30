@@ -26,20 +26,21 @@ struct StatsView: View {
     @State private var todayAverageCloseAge = ""
     @State private var totalAverageCloseAge = ""
     @State private var fearGreedIndex = ""
-    @State private var portfolioBalance = 0.0
-    @State private var portfolioChangePercent = ""
+    @State private var portfolioBalance = ""
+    @State private var usdtAvailable = ""
     @State private var daysTradingCount = ""
     @State private var averageDailyClosedCount = ""
     @State private var averageDailyClosedProfit = ""
     @State private var bagsCount = ""
     @State private var bagsAmount = ""
-    @State private var oldestBag = ""
+    @State private var biggestBag = ""
     @State private var activeBots = ""
     @State private var mostTradedAsset = ""
     @State private var largestDeal = ""
     @State private var bitcoinTicker = ""
     @State private var ethereumTicker = ""
     @State private var dogecoinTicker = ""
+    @State private var buildNumber = ""
     
     var body: some View {
         NavigationView {
@@ -123,7 +124,7 @@ struct StatsView: View {
                         Text("\(dealsClosedMaxSafetyOrdersPercent)%")
                     }
                     HStack {
-                        Text("Bags, older than 72 hours")
+                        Text("Bags, Less Than -$100")
                         Spacer()
                         Text(bagsCount)
                     }
@@ -133,9 +134,9 @@ struct StatsView: View {
                         Text("$\(bagsAmount)")
                     }
                     HStack {
-                        Text("Oldest Bag")
+                        Text("Biggest Bag")
                         Spacer()
-                        Text("\(oldestBag) hours")
+                        Text("$\(biggestBag)")
                     }
                 }
                 Group {
@@ -157,12 +158,12 @@ struct StatsView: View {
                     HStack {
                         Text("Portfolio Balance")
                         Spacer()
-                        Text("$\(portfolioBalance, specifier: "%.2f")")
+                        Text("$\(portfolioBalance)")
                     }
                     HStack {
-                        Text("Portfolio Change")
+                        Text("USDT Available")
                         Spacer()
-                        Text("\(portfolioChangePercent)%")
+                        Text("$\(usdtAvailable)")
                     }
                     HStack {
                         Text("Fear & Greed Index")
@@ -183,6 +184,13 @@ struct StatsView: View {
                         Text("Dogecoin")
                         Spacer()
                         Text("$\(dogecoinTicker)")
+                    }
+                }
+                Group {
+                    HStack {
+                        Text("Build Number")
+                        Spacer()
+                        Text(buildNumber)
                     }
                 }
             }
@@ -232,13 +240,13 @@ struct StatsView: View {
                let totalAverageCloseAge = stats.totalAverageCloseAge,
                let fearGreedIndex = stats.fearGreedIndex,
                let portfolioBalance = stats.portfolioBalance,
-               let portfolioChangePercent = stats.portfolioChangePercent,
+               let usdtAvailable = stats.usdtAvailable,
                let daysTradingCount = stats.daysTradingCount,
                let averageDailyClosedCount = stats.averageDailyClosedCount,
                let averageDailyClosedProfit = stats.averageDailyClosedProfit,
                let bagsCount = stats.bagsCount,
                let bagsAmount = stats.bagsAmount,
-               let oldestBag = stats.oldestBag,
+               let biggestBag = stats.biggestBag,
                let activeBots = stats.activeBots,
                let mostTradedAsset = stats.mostTradedAsset,
                let largestDeal = stats.largestDeal,
@@ -260,13 +268,13 @@ struct StatsView: View {
                 self.totalAverageCloseAge = totalAverageCloseAge
                 self.fearGreedIndex = fearGreedIndex
                 self.portfolioBalance = portfolioBalance
-                self.portfolioChangePercent = portfolioChangePercent
+                self.usdtAvailable = usdtAvailable
                 self.daysTradingCount = daysTradingCount
                 self.averageDailyClosedCount = averageDailyClosedCount
                 self.averageDailyClosedProfit = averageDailyClosedProfit
                 self.bagsCount = bagsCount
                 self.bagsAmount = bagsAmount
-                self.oldestBag = oldestBag
+                self.biggestBag = biggestBag
                 self.activeBots = activeBots
                 self.mostTradedAsset = mostTradedAsset
                 self.largestDeal = largestDeal
@@ -276,6 +284,9 @@ struct StatsView: View {
             }
         } catch {
             print("Error loading stats: \(error)")
+        }
+        if let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            self.buildNumber = buildNumber
         }
     }
 }
